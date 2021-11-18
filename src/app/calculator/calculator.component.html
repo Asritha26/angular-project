@@ -1,0 +1,27 @@
+<input [(ngModel)]="inputData"/>
+<input [(ngModel)]="result"/>
+<div class="calculator">
+
+    <div class="col-sm-6 p-1 m-0">
+        <button type="button" class="btn btn-dark col-sm-8" (click)="AllClr()">AC</button>
+    </div>
+    <div class="col-sm-6 p-1 m-0">
+        <button type="button" class="btn btn-secondary col-sm-2 p-1" *ngFor="let n of ['1','2','3']" (click)="operand(n)">{{n}}</button>
+        <button type="button" class="btn btn-dark col-sm-2 p-1" (click)="operator('+')">+</button>
+    </div>
+    <div class="col-sm-6 p-1 m-0">
+        <button type="button" class="btn btn-secondary col-sm-2 p-1" *ngFor="let n of ['4','5','6']" (click)="operand(n)">{{n}}</button>
+        <button type="button" class="btn btn-dark col-sm-2 p-1" (click)="operator('-')">-</button>
+    </div>
+    <div class="col-sm-6 p-1 m-0">
+        <button type="button" class="btn btn-secondary col-sm-2 p-1" *ngFor="let n of ['7','8','9']" (click)="operand(n)">{{n}}</button>
+        <button type="button" class="btn btn-dark col-sm-2 p-1" (click)="operator('*')">*</button>
+    </div>
+    <div class="col-sm-6 p-1 m-0">
+        <button type="button" class="btn btn-dark col-sm-2 p-1" *ngFor="let n of ['0','.']" (click)="operand(n)">{{n}}</button>
+        <button type="button" class="btn btn-dark col-sm-2 p-1" (click)="equate()">=</button>
+        <button type="button" class="btn btn-dark col-sm-2 p-1"(click)="operator('/')">/</button>
+    </div>
+
+
+</div>
